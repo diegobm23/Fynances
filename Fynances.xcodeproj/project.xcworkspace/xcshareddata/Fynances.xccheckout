@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>0EE6219D-7C09-4382-B0DA-C06D83B6E3F0</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Fynances</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>769CE4DB-2ED3-4CDB-86ED-5B505179A5E5</key>
+		<string>https://github.com/diegobm23/Fynances.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Fynances.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>769CE4DB-2ED3-4CDB-86ED-5B505179A5E5</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/diegobm23/Fynances.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>769CE4DB-2ED3-4CDB-86ED-5B505179A5E5</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>769CE4DB-2ED3-4CDB-86ED-5B505179A5E5</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Fynances</string>
+		</dict>
+	</array>
+</dict>
+</plist>
