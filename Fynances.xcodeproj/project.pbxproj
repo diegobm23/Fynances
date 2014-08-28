@@ -21,6 +21,8 @@
 		A30BF13319AD8A9E00C0717C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A30BF11519AD8A9D00C0717C /* UIKit.framework */; };
 		A30BF13B19AD8A9E00C0717C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A30BF13919AD8A9E00C0717C /* InfoPlist.strings */; };
 		A30BF13D19AD8A9E00C0717C /* FynancesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A30BF13C19AD8A9E00C0717C /* FynancesTests.m */; };
+		A340DF0119AEBE500033EE2B /* ListaCreditoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A340DF0019AEBE500033EE2B /* ListaCreditoViewController.m */; };
+		A340DF0419AEBE660033EE2B /* ListaDebitoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A340DF0319AEBE660033EE2B /* ListaDebitoViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,10 @@
 		A30BF13819AD8A9E00C0717C /* FynancesTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FynancesTests-Info.plist"; sourceTree = "<group>"; };
 		A30BF13A19AD8A9E00C0717C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A30BF13C19AD8A9E00C0717C /* FynancesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FynancesTests.m; sourceTree = "<group>"; };
+		A340DEFF19AEBE500033EE2B /* ListaCreditoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListaCreditoViewController.h; sourceTree = "<group>"; };
+		A340DF0019AEBE500033EE2B /* ListaCreditoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListaCreditoViewController.m; sourceTree = "<group>"; };
+		A340DF0219AEBE660033EE2B /* ListaDebitoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListaDebitoViewController.h; sourceTree = "<group>"; };
+		A340DF0319AEBE660033EE2B /* ListaDebitoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListaDebitoViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,11 +118,10 @@
 		A30BF11719AD8A9D00C0717C /* Fynances */ = {
 			isa = PBXGroup;
 			children = (
+				A340DF0519AECA350033EE2B /* Controllers */,
 				A30BF12019AD8A9D00C0717C /* AppDelegate.h */,
 				A30BF12119AD8A9D00C0717C /* AppDelegate.m */,
 				A30BF12319AD8A9D00C0717C /* Main.storyboard */,
-				A30BF12619AD8A9D00C0717C /* ViewController.h */,
-				A30BF12719AD8A9D00C0717C /* ViewController.m */,
 				A30BF12919AD8A9D00C0717C /* Images.xcassets */,
 				A30BF11819AD8A9D00C0717C /* Supporting Files */,
 			);
@@ -150,6 +155,19 @@
 				A30BF13919AD8A9E00C0717C /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A340DF0519AECA350033EE2B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A340DF0219AEBE660033EE2B /* ListaDebitoViewController.h */,
+				A340DF0319AEBE660033EE2B /* ListaDebitoViewController.m */,
+				A340DEFF19AEBE500033EE2B /* ListaCreditoViewController.h */,
+				A340DF0019AEBE500033EE2B /* ListaCreditoViewController.m */,
+				A30BF12619AD8A9D00C0717C /* ViewController.h */,
+				A30BF12719AD8A9D00C0717C /* ViewController.m */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -250,6 +268,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A30BF12819AD8A9D00C0717C /* ViewController.m in Sources */,
+				A340DF0119AEBE500033EE2B /* ListaCreditoViewController.m in Sources */,
+				A340DF0419AEBE660033EE2B /* ListaDebitoViewController.m in Sources */,
 				A30BF12219AD8A9D00C0717C /* AppDelegate.m in Sources */,
 				A30BF11E19AD8A9D00C0717C /* main.m in Sources */,
 			);
@@ -456,6 +476,7 @@
 				A30BF14219AD8A9E00C0717C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A30BF14319AD8A9E00C0717C /* Build configuration list for PBXNativeTarget "FynancesTests" */ = {
 			isa = XCConfigurationList;
@@ -464,6 +485,7 @@
 				A30BF14519AD8A9E00C0717C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

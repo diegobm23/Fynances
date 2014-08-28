@@ -20,12 +20,12 @@
                     <navigationItem key="navigationItem" title="Geral" id="tTh-D0-QpW">
                         <barButtonItem key="leftBarButtonItem" title="Débitos" id="I65-FT-Exm">
                             <connections>
-                                <segue destination="0SS-kX-iJd" kind="push" id="dK6-KQ-jv1"/>
+                                <segue destination="0SS-kX-iJd" kind="push" identifier="GeralDebitosSegue" id="dK6-KQ-jv1"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Créditos" id="xRN-E1-q6R">
                             <connections>
-                                <segue destination="3SC-d9-SnC" kind="push" id="lDC-UJ-O30"/>
+                                <segue destination="3SC-d9-SnC" kind="push" identifier="GeralCreditosSegue" id="lDC-UJ-O30"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -35,10 +35,10 @@
             </objects>
             <point key="canvasLocation" x="1265" y="36"/>
         </scene>
-        <!--View Controller - Créditos-->
+        <!--Lista Credito View Controller - Lista de Créditos-->
         <scene sceneID="jWU-aw-vdy">
             <objects>
-                <viewController id="3SC-d9-SnC" sceneMemberID="viewController">
+                <viewController id="3SC-d9-SnC" customClass="ListaCreditoViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="nJg-S7-yQK"/>
                         <viewControllerLayoutGuide type="bottom" id="82H-Zs-Y8V"/>
@@ -48,16 +48,16 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Créditos" id="giU-KP-o5C"/>
+                    <navigationItem key="navigationItem" title="Lista de Créditos" id="giU-KP-o5C"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RKK-vP-5vO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1819" y="-327"/>
+            <point key="canvasLocation" x="1819" y="-307"/>
         </scene>
-        <!--View Controller - Débitos-->
+        <!--Lista Debito View Controller - Lista de Débitos-->
         <scene sceneID="ymt-Gz-F2I">
             <objects>
-                <viewController id="0SS-kX-iJd" sceneMemberID="viewController">
+                <viewController id="0SS-kX-iJd" customClass="ListaDebitoViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="0Xu-c2-X3K"/>
                         <viewControllerLayoutGuide type="bottom" id="MBd-ul-Jct"/>
@@ -67,11 +67,11 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Débitos" id="2si-ap-VEc"/>
+                    <navigationItem key="navigationItem" title="Lista de Débitos" id="2si-ap-VEc"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L1f-9g-ZVn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1819" y="383"/>
+            <point key="canvasLocation" x="1819" y="362"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ehG-Gz-ffd">
