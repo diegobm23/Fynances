@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>menu</key>
+	<array>
+		<dict>
+			<key>titulo</key>
+			<string>Listar Créditos</string>
+			<key>segue</key>
+			<string>GeralListarCreditoSegue</string>
+		</dict>
+		<dict>
+			<key>titulo</key>
+			<string>Listar Débitos</string>
+			<key>segue</key>
+			<string>GeralListarDebitoSegue</string>
+		</dict>
+		<dict>
+			<key>titulo</key>
+			<string>Adicionar Lançamento</string>
+			<key>segue</key>
+			<string>GeralAddLancamentoSegue</string>
+		</dict>
+	</array>
+</dict>
+</plist>

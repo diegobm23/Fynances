@@ -15,21 +15,27 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" indicatorStyle="black" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="k7S-PE-W1P">
+                                <rect key="frame" x="0.0" y="-3" width="320" height="210"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <sections/>
+                                <connections>
+                                    <outlet property="dataSource" destination="vXZ-lx-hvc" id="4et-Yu-ULM"/>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="5If-Ag-Sfe"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Geral" id="tTh-D0-QpW">
-                        <barButtonItem key="leftBarButtonItem" title="Débitos" id="I65-FT-Exm">
-                            <connections>
-                                <segue destination="0SS-kX-iJd" kind="push" identifier="GeralDebitosSegue" id="dK6-KQ-jv1"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Créditos" id="xRN-E1-q6R">
-                            <connections>
-                                <segue destination="3SC-d9-SnC" kind="push" identifier="GeralCreditosSegue" id="lDC-UJ-O30"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Geral" id="tTh-D0-QpW"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="tabelaMenu" destination="k7S-PE-W1P" id="MCa-NL-1qW"/>
+                        <segue destination="3SC-d9-SnC" kind="push" identifier="GeralListarCreditoSegue" id="4s9-GW-Cou"/>
+                        <segue destination="0SS-kX-iJd" kind="push" identifier="GeralListarDebitoSegue" id="iAd-lp-Hmv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
