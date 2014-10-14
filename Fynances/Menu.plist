@@ -18,7 +18,7 @@
 		</dict>
 		<dict>
 			<key>titulo</key>
-			<string>Adicionar Lançamento</string>
+			<string>Novo Lançamento</string>
 			<key>segue</key>
 			<string>GeralAddLancamentoSegue</string>
 		</dict>

@@ -22,8 +22,11 @@
 		A30BF13B19AD8A9E00C0717C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A30BF13919AD8A9E00C0717C /* InfoPlist.strings */; };
 		A30BF13D19AD8A9E00C0717C /* FynancesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A30BF13C19AD8A9E00C0717C /* FynancesTests.m */; };
 		A30D029F19BE7C45001F919F /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A30D029E19BE7C45001F919F /* CoreData.framework */; };
+		A3407C2419C2A12100E4B54E /* AddLancamentoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3407C2219C2753D00E4B54E /* AddLancamentoViewController.m */; };
 		A340DF0119AEBE500033EE2B /* ListaCreditoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A340DF0019AEBE500033EE2B /* ListaCreditoViewController.m */; };
 		A340DF0419AEBE660033EE2B /* ListaDebitoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A340DF0319AEBE660033EE2B /* ListaDebitoViewController.m */; };
+		A3448BA419CA59B100838FD5 /* DAOLancamento.m in Sources */ = {isa = PBXBuildFile; fileRef = A3448BA319CA59B100838FD5 /* DAOLancamento.m */; };
+		A3448BA719CA5AD900838FD5 /* Lancamento.m in Sources */ = {isa = PBXBuildFile; fileRef = A3448BA619CA5AD900838FD5 /* Lancamento.m */; };
 		A385D8AF19BFC61F0088BF9A /* Menu.plist in Resources */ = {isa = PBXBuildFile; fileRef = A385D8AE19BFC61F0088BF9A /* Menu.plist */; };
 		A385D8B219BFCB450088BF9A /* GeralMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = A385D8B119BFCB450088BF9A /* GeralMenu.m */; };
 		A397AD2419B559EE0065BA84 /* FynancesData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A397AD2219B559EE0065BA84 /* FynancesData.xcdatamodeld */; };
@@ -60,10 +63,16 @@
 		A30BF13A19AD8A9E00C0717C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A30BF13C19AD8A9E00C0717C /* FynancesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FynancesTests.m; sourceTree = "<group>"; };
 		A30D029E19BE7C45001F919F /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		A3407C2119C2753D00E4B54E /* AddLancamentoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddLancamentoViewController.h; sourceTree = "<group>"; };
+		A3407C2219C2753D00E4B54E /* AddLancamentoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddLancamentoViewController.m; sourceTree = "<group>"; };
 		A340DEFF19AEBE500033EE2B /* ListaCreditoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListaCreditoViewController.h; sourceTree = "<group>"; };
 		A340DF0019AEBE500033EE2B /* ListaCreditoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListaCreditoViewController.m; sourceTree = "<group>"; };
 		A340DF0219AEBE660033EE2B /* ListaDebitoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListaDebitoViewController.h; sourceTree = "<group>"; };
 		A340DF0319AEBE660033EE2B /* ListaDebitoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListaDebitoViewController.m; sourceTree = "<group>"; };
+		A3448BA219CA59B100838FD5 /* DAOLancamento.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DAOLancamento.h; sourceTree = "<group>"; };
+		A3448BA319CA59B100838FD5 /* DAOLancamento.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DAOLancamento.m; sourceTree = "<group>"; };
+		A3448BA519CA5AD900838FD5 /* Lancamento.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Lancamento.h; sourceTree = "<group>"; };
+		A3448BA619CA5AD900838FD5 /* Lancamento.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Lancamento.m; sourceTree = "<group>"; };
 		A385D8AE19BFC61F0088BF9A /* Menu.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Menu.plist; sourceTree = "<group>"; };
 		A385D8B019BFCB450088BF9A /* GeralMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeralMenu.h; sourceTree = "<group>"; };
 		A385D8B119BFCB450088BF9A /* GeralMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeralMenu.m; sourceTree = "<group>"; };
@@ -129,11 +138,16 @@
 		A30BF11719AD8A9D00C0717C /* Fynances */ = {
 			isa = PBXGroup;
 			children = (
+				A3448BA119CA590F00838FD5 /* DAO */,
 				A340DF0519AECA350033EE2B /* Listas */,
 				A30BF12619AD8A9D00C0717C /* ViewController.h */,
 				A30BF12719AD8A9D00C0717C /* ViewController.m */,
+				A3407C2119C2753D00E4B54E /* AddLancamentoViewController.h */,
+				A3407C2219C2753D00E4B54E /* AddLancamentoViewController.m */,
 				A30BF12019AD8A9D00C0717C /* AppDelegate.h */,
 				A30BF12119AD8A9D00C0717C /* AppDelegate.m */,
+				A3448BA519CA5AD900838FD5 /* Lancamento.h */,
+				A3448BA619CA5AD900838FD5 /* Lancamento.m */,
 				A385D8B019BFCB450088BF9A /* GeralMenu.h */,
 				A385D8B119BFCB450088BF9A /* GeralMenu.m */,
 				A30BF12319AD8A9D00C0717C /* Main.storyboard */,
@@ -183,6 +197,15 @@
 				A340DF0019AEBE500033EE2B /* ListaCreditoViewController.m */,
 			);
 			name = Listas;
+			sourceTree = "<group>";
+		};
+		A3448BA119CA590F00838FD5 /* DAO */ = {
+			isa = PBXGroup;
+			children = (
+				A3448BA219CA59B100838FD5 /* DAOLancamento.h */,
+				A3448BA319CA59B100838FD5 /* DAOLancamento.m */,
+			);
+			name = DAO;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -285,9 +308,12 @@
 			files = (
 				A30BF12819AD8A9D00C0717C /* ViewController.m in Sources */,
 				A340DF0119AEBE500033EE2B /* ListaCreditoViewController.m in Sources */,
+				A3407C2419C2A12100E4B54E /* AddLancamentoViewController.m in Sources */,
 				A397AD2419B559EE0065BA84 /* FynancesData.xcdatamodeld in Sources */,
+				A3448BA419CA59B100838FD5 /* DAOLancamento.m in Sources */,
 				A385D8B219BFCB450088BF9A /* GeralMenu.m in Sources */,
 				A340DF0419AEBE660033EE2B /* ListaDebitoViewController.m in Sources */,
+				A3448BA719CA5AD900838FD5 /* Lancamento.m in Sources */,
 				A30BF12219AD8A9D00C0717C /* AppDelegate.m in Sources */,
 				A30BF11E19AD8A9D00C0717C /* main.m in Sources */,
 			);

@@ -14,5 +14,6 @@
 }
 
 @property (weak, nonatomic) IBOutlet UITableView *tabelaMenu;
+@property (weak, nonatomic) IBOutlet UITableView *tabelaLancamentos;
 
 @end

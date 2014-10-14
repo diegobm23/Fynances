@@ -8,6 +8,8 @@
 
 #import "ViewController.h"
 #import "GeralMenu.h"
+#import "DAOLancamento.h"
+#import "Lancamento.h"
 
 @interface ViewController ()
 
@@ -19,6 +21,9 @@
 {
     [super viewDidLoad];
 	[self carregarMenus];
+    
+    DAOLancamento *dao = [[DAOLancamento alloc] init];
+    arrayLancGerais = [dao carregarLancamentos];
 }
 
 - (void)didReceiveMemoryWarning
@@ -44,10 +49,10 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     if (tableView == self.tabelaMenu) {
-        return arrayMenus.count;
+        return [arrayMenus count];
     }
     else {
-        return 0;
+        return [arrayLancGerais count];
     }
 }
 
@@ -69,13 +74,17 @@
         
         return cell;
     }
-    else {
+    else  {
         CelulaCacheID = @"CelulaGeralID";
         UITableViewCell *cell = [self.tabelaMenu dequeueReusableCellWithIdentifier:CelulaCacheID];
         
         if (!cell) {
             cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CelulaCacheID];
         }
+        
+        Lancamento *l = [arrayLancGerais objectAtIndex:indexPath.row];
+        cell.textLabel.text = l.titulo;
+        cell.detailTextLabel.text = [NSString stringWithFormat:@"R$ %.2f - %@", l.valor.floatValue, [NSDateFormatter localizedStringFromDate:l.data dateStyle:NSDateFormatterShortStyle timeStyle:NSDateFormatterNoStyle]];
         
         return cell;
     }
@@ -87,7 +96,8 @@
         GeralMenu *m = [arrayMenus objectAtIndex:indexPath.row];
         [self performSegueWithIdentifier:m.segue sender:nil];
     }
-    else {
+    
+    if (tableView == self.tabelaLancamentos) {
         
     }
         
