@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ListaCreditoViewController : UIViewController
+@interface ListaCreditoViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+{
+    NSMutableArray *arrayCreditos;
+}
+
+@property (weak, nonatomic) IBOutlet UITableView *listaCreditos;
 
 @end

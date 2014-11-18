@@ -7,6 +7,8 @@
 //
 
 #import "ListaCreditoViewController.h"
+#import "DAOLancamento.h"
+#import "Lancamento.h"
 
 @interface ListaCreditoViewController ()
 
@@ -26,13 +28,41 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    [self carregarCreditos];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void) carregarCreditos
+{
+    DAOLancamento *dao = [[DAOLancamento alloc] init];
+    arrayCreditos = [dao carregarCreditos];
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return [arrayCreditos count];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *CelulaCacheID;
+    CelulaCacheID = @"CelulaGeralID";
+    UITableViewCell *cell = [self.listaCreditos dequeueReusableCellWithIdentifier:CelulaCacheID];
+    
+    if (!cell) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CelulaCacheID];
+    }
+    
+    Lancamento *l = [arrayCreditos objectAtIndex:indexPath.row];
+    cell.textLabel.text = l.titulo;
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"R$ %.2f em %@", l.valor.floatValue, [NSDateFormatter localizedStringFromDate:l.data dateStyle:NSDateFormatterShortStyle timeStyle:NSDateFormatterNoStyle]];
+    
+    return cell;
 }
 
 /*

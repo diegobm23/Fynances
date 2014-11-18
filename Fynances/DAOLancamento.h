@@ -13,5 +13,6 @@
 
 - (BOOL)salvarLancamento:(Lancamento *) lanc;
 - (NSMutableArray *)carregarLancamentos;
+- (NSMutableArray *)carregarCreditos;
 
 @end

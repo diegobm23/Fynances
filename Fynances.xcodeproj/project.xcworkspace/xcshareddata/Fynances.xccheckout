@@ -14,7 +14,7 @@
 		<string>https://github.com/diegobm23/Fynances.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Fynances.xcodeproj/project.xcworkspace</string>
+	<string>Fynances.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>AB7F95AC56A5A45FBA0CB28905B904721D46D037</key>

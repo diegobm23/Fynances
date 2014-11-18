@@ -21,9 +21,12 @@
 {
     [super viewDidLoad];
 	[self carregarMenus];
-    
-    DAOLancamento *dao = [[DAOLancamento alloc] init];
-    arrayLancGerais = [dao carregarLancamentos];
+    [self carregarlancamentos];
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [self carregarlancamentos];
 }
 
 - (void)didReceiveMemoryWarning
@@ -44,6 +47,12 @@
         GeralMenu *m = [[GeralMenu alloc] initWithTitulo:[item objectForKey:@"titulo"] andSegue:[item objectForKey:@"segue"]];
         [arrayMenus addObject:m];
     }
+}
+
+- (void) carregarlancamentos
+{
+    DAOLancamento *dao = [[DAOLancamento alloc] init];
+    arrayLancGerais = [dao carregarLancamentos];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -84,7 +93,7 @@
         
         Lancamento *l = [arrayLancGerais objectAtIndex:indexPath.row];
         cell.textLabel.text = l.titulo;
-        cell.detailTextLabel.text = [NSString stringWithFormat:@"R$ %.2f - %@", l.valor.floatValue, [NSDateFormatter localizedStringFromDate:l.data dateStyle:NSDateFormatterShortStyle timeStyle:NSDateFormatterNoStyle]];
+        cell.detailTextLabel.text = [NSString stringWithFormat:@"R$ %.2f em %@", l.valor.floatValue, [NSDateFormatter localizedStringFromDate:l.data dateStyle:NSDateFormatterShortStyle timeStyle:NSDateFormatterNoStyle]];
         
         return cell;
     }
@@ -100,7 +109,6 @@
     if (tableView == self.tabelaLancamentos) {
         
     }
-        
 }
 
 @end
